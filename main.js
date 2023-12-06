@@ -29,7 +29,7 @@ const getMessage = arr => {
 // now we store each ramdom message in variables
 
 const result = () => {
-    let finalPart = getMessage(random); // we assign the ramdom to the array and out it inside the funcions so it can be called more than once
+    let finalPart = getMessage(random); /*we assing the random array to the function get message, and this one inside a variable. It is inside the fucntion so ti can be called more than 1 time*/
     return `${pronouns} ${verbs} ${finalPart}` // returned like this so ti can be modified with more content in the future. 
 };
 
