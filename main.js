@@ -29,16 +29,17 @@ const getMessage = arr => {
 // now we store each ramdom message in variables
 
 const result = () => {
-    let finalPart = getMessage(random);
-    return `${pronouns} ${verbs} ${finalPart}`
+    let finalPart = getMessage(random); // we assign the ramdom to the array and out it inside the funcions so it can be called more than once
+    return `${pronouns} ${verbs} ${finalPart}` // returned like this so ti can be modified with more content in the future. 
 };
 
 //console.log(result())
-
+/* we create a function where every time we call it it will make appear the <p> with class .txt and change the inner html content to the result function*/
 const printMessage = () => {
   document.querySelector(".text").style.display = "block";
   document.querySelector(".text").innerHTML = result();
 };
 
-const generateButton = document.getElementById("button");
+/*JavaScript code then selects the button using getElementById and adds an event listener to it. The event listener is set to call the printMessage function when the button is clicked*/
+const generateButton = document.getElementById("button"); 
   generateButton.addEventListener("click", printMessage);
